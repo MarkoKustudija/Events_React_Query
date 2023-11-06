@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import EventItem from "./EventItem";
+import LoadingIndicator from '../UI/LoadingIndicator';
+import ErrorBlock from '../UI/ErrorBlock';
 
 function NewEventsSection() {
   const [data, setData] = useState();
@@ -38,11 +40,13 @@ function NewEventsSection() {
   let content;
 
   if (isLoading) {
-    content = <p>Loading ...</p>;
+    content = <LoadingIndicator />
   }
 
   if (error) {
-    content = <p>Error</p>;
+    content = (
+      <ErrorBlock title="An error occured" message="Failed to fetch events"/>
+    )
   }
 
   if (data) {
