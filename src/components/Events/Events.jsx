@@ -9,7 +9,7 @@ function Events() {
     <>
       <Outlet />
       <Header>
-        <Link to="events/new" className="button">
+        <Link to="/events/new" className="button">
           New Event
         </Link>
       </Header>
