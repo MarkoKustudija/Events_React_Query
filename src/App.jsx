@@ -1,11 +1,11 @@
 import Events from "../src/components/Events/Events";
-import EventForm from "../src/components/Events/EventForm";
 
 import {
   Navigate,
   RouterProvider,
   createBrowserRouter,
 } from "react-router-dom";
+import NewEvent from "./components/Events/NewEvent";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/events/new",
-        element: <EventForm />,
+        element: <NewEvent />,
       },
     ],
   },
