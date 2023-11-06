@@ -1,4 +1,5 @@
 import Events from "../src/components/Events/Events";
+import EventForm from "../src/components/Events/EventForm";
 
 import {
   Navigate,
@@ -14,6 +15,13 @@ const router = createBrowserRouter([
   {
     path: "/events",
     element: <Events />,
+
+    children: [
+      {
+        path: "/events/new",
+        element: <EventForm />,
+      },
+    ],
   },
 ]);
 

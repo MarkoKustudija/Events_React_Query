@@ -13,7 +13,6 @@ function Events() {
           New Event
         </Link>
       </Header>
-
       <main>
         <EventsIntroSection />
         <NewEventsSection />
