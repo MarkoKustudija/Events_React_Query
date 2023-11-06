@@ -9,7 +9,6 @@ function NewEvent() {
   const handleSubmit = (formData) => {};
 
   return (
-    <div>
       <Modal onClose={() => navigate("../")}>
         <EventForm onSubmit={handleSubmit}>
           <>
@@ -22,7 +21,6 @@ function NewEvent() {
           </>
         </EventForm>
       </Modal>
-    </div>
   );
 }
 
