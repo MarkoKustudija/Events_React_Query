@@ -1,5 +1,4 @@
 import Events from "../src/components/Events/Events";
-import "./App.css";
 
 import {
   Navigate,
