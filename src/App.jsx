@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import NewEvent from "./components/Events/NewEvent";
 import EventDetails from './components/Events/EventDetails';
+import EditEvent from "./components/Events/EditEvent";
 
 const router = createBrowserRouter([
   {
@@ -26,7 +27,13 @@ const router = createBrowserRouter([
   },
   {
     path: '/events/:id',
-    element: <EventDetails />
+    element: <EventDetails />, 
+    children: [
+      {
+        path: '/events/:id/edit',
+        element: <EditEvent />
+      }
+    ]
   }
 ]);
 
